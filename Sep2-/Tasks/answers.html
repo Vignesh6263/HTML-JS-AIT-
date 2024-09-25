@@ -1,0 +1,87 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Functions</title>
+    <style>
+        ul li {
+            font-size: 16px;
+        }
+    </style>
+</head>
+<body>
+    <ul>
+        <li>Item 1</li>
+        <li>Item 2</li>
+        <li>Item 3</li>
+    </ul>
+
+    <div id="myDiv">This is a div</div>
+
+    <script>
+        function sqr(a) {
+            let b = a * a;
+            console.log(b);
+        }
+        sqr(4);
+
+        function sumArray(arr) {
+            let sum = 0;
+            for (var i = 0; i < arr.length; i++) {
+                sum += arr[i];
+            }
+            console.log(sum);
+        }
+        sumArray([34, 54, 66, 45, 3, 2]);
+
+        function larger(a, b) {
+            if (a > b) {
+                console.log(a);
+            } else {
+                console.log(b);
+            }
+        }
+        larger(10, 5);
+
+        function multiplier(factor) {
+            return function(num) {
+                console.log(num * factor);
+            }
+        }
+        var timesTwo = multiplier(2);
+        timesTwo(5);
+
+        (function() {
+            console.log("Hello World");
+        })();
+
+        document.addEventListener("keydown", function(event) {
+            console.log("Key pressed: " + event.key);
+        });
+
+        var liElements = document.querySelectorAll('ul li');
+        for (var i = 0; i < liElements.length; i++) {
+            liElements[i].style.fontSize = '20px';
+        }
+
+        var divElement = document.getElementById('myDiv');
+        divElement.style.backgroundColor = 'blue';
+
+        function reverseString(str) {
+            var reversed = str.split('').reverse().join('');
+            console.log(reversed);
+        }
+        reverseString("hello");
+
+        var arr = [1, 2, 3, 4, 5];
+        arr.splice(3, 0, 100);
+        console.log(arr);
+
+        var arr2 = [1, 2, 3, 4, 5];
+        arr2.splice(1, 2, 'a', 'b', 'c');
+        console.log(arr2);
+    </script>
+</body>
+</html>

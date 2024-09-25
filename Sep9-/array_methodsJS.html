@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <title>title</title>
+</head>
+<body>
+    <!-- Declare arrays in 2 ways 
+    1.Array literals
+    2.Array constructor
+     -->
+<script>
+    //Array Literals
+let c=['vijay','yogi','vicky','vj','sanjay'];
+console.log(c);
+
+//push():add element in the end of an array
+c.push('naveen');
+console.log(c);
+
+//pop():delete element in the end of an array
+c.pop();
+console.log(c);
+
+//unshift():adds element in the starting of an array
+c.unshift('Yogi Sir');
+console.log(c);
+
+//shift():delete element in the starting of an array
+c.shift();
+console.log(c);
+
+//slice 
+console.log(c);
+console.log(c.slice(1,3)); //slice  from an index to index
+console.log("Slice from an index 1 to 3");
+console.log(c);
+
+
+
+console.log(c);
+console.log(c.slice(1));// slice from an element
+console.log("Slice from an index");
+console.log(c);
+
+
+//splice
+console.log(c);
+c.splice(1,3,'krishna');
+console.log(c);
+
+
+//sort 
+let num=[1,2,5,43,3,6,21,12,43,112,56,1111,54,22,294,3,9];
+console.log(num);
+console.log(num.sort());
+console.log(num.reverse());
+console.log(num.concat(56));
+
+
+
+
+//Array Constructor
+
+let new_arr=new Array('mathii','koushi','vignesh','Fouzi','freeti','ramya','kavya');
+
+
+//splice
+console.log(new_arr);
+new_arr.splice(1,3,'krishna');
+console.log(new_arr);
+</script>
+    </body>
+</html>

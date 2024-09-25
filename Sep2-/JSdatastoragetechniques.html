@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Datastorage</title>
+</head>
+<body>
+    
+    <script>
+
+        //String Declare Methods 
+        //1.string literals method
+
+        var s="xyz";
+        document.write(s+"<br>");
+        document.write(typeof(s)+"<br>");
+
+        //2.string constructor method
+        //in constructor type of string is object
+
+        let s2=new String("abc")
+        document.write(s2+"<br>");
+        document.write(typeof(s2)+"<br>");
+
+
+        //Array: array is an collection of multiple value of multiple  data types in a single variable.
+
+        document.write("<h2>Arrays</h2>");
+        var concepts=["HTML","CSS","JS","Python",".Net"];
+        document.write(concepts+"<br>");
+        document.write(typeof(concepts)+"<br>");
+        console.log(concepts);
+
+        document.write(concepts[0]+"<br>"); // retrive element manually by using index value
+        document.write(concepts[2]+"<br>");
+        document.write(concepts[3]+"<br>");
+        document.write(concepts[4]+"<br>");
+        document.write(concepts[5]+"<br>");
+     
+        
+    // retrive element by using loops
+
+    for(let i=0;i<=4;i++){
+        document.write(concepts[i]+"<br>");
+    }
+       
+    //upto to concepts lenth 
+    for(let i=0;i<concepts.length;i++){
+        document.write(concepts[i]+"<br>");
+    }
+
+    //using while
+    let n=[1,23,4,7,6,9,8,6,5,3,2]
+    let i=0;
+     while(i<n.length)
+     {
+        document.write(n[i]+"<br>");
+        i++;
+
+     }
+
+
+
+
+
+     let car={
+        name:"BMW",
+        color:"Black",
+        price:2000000,
+     }
+     document.write("Retrive the obj values by manually <br>")
+     console.log(car);
+     document.write(car.name+"<br>");
+     document.write(car.color+"<br>");
+     document.write(car.price+"<br>");
+
+
+     document.write("Retrive the obj values by using Loops <br>")
+//using for loop
+     for(let i in car){
+        document.write([i+" :  "]); //key name here declare as i
+        document.write(car[i]+"<br>"); //key values are car[i]
+let users=[
+    {
+        id:10,
+        name:"vj",
+        email:"xyz@email.com",
+        course:"Mern"
+    },
+    {
+        id:20,
+        name:"Raj",
+        email:"xyz@email.com",
+        course:"JS"
+    },
+    {
+        id:30,
+        name:"vj",
+        email:"xyz@email.com",
+        course:"Java"
+    },
+    {
+        id:40,
+        name:"vj",
+        email:"xyz@email.com",
+        course:".net"
+    },  {
+        id:50,
+        name:"vj",
+        email:"xyz@email.com",
+        course:"Python"
+    }
+];
+
+document.write("Array of obj retrival<br>");
+document.write(users[0].id+"<br>");//0 th index id value
+document.write(users[1].id+"<br>");
+document.write(users[2].id+"<br>");
+
+document.write(users[1].email+"<br>");
+        
+
+
+     }
+        
+    </script>
+</body>
+</html>

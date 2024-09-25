@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Date Dropdown Using Loops</title>
+</head>
+<body>
+        <!-- 
+    1.for   
+    syntax : for(initialization;condition;increment/decrement)
+                 { statements/expressions}
+    2.while
+    syntax : while(condition)
+                 { statements/expressions
+                   increment/decrement
+                  }
+    3.do while 
+    syntax : do
+                 { statements/expressions
+                   increment/decrement
+                 }while(condition) 
+     -->
+<br>
+<h2>Date using For Loop</h2>
+<br>
+    <select name="date" id="date1"></select> 
+    <select name="month1" id="month1"></select>
+    <select name="year1" id="year1"></select> <br>
+<br>
+<h2>Date using While Loop</h2>
+<br> 
+    <select name="date" id="date2"></select> 
+    <select name="month" id="month2"></select> 
+    <select name="year" id="year2"></select> <br>
+<br>
+<h2>Date using Do while Loop</h2>
+<br>
+    <select name="date" id="date3"></select> 
+    <select name="month" id="month3"></select> 
+    <select name="year" id="year3"></select> <br>
+    
+    
+  <script>
+
+
+//For Loop 
+    var d1="<option>Date</option>";
+    for (let i=1;i<32;i++){
+        d1+="<option value="+i+">"+i+"</option>";
+
+    }
+    document.getElementById('date1').innerHTML=d1;
+
+   
+
+    
+
+    var mon1="<option>Month</option>";
+    for (let i=1;i<13;i++){
+        mon1+="<option value="+i+">"+i+"</option>";
+
+    }
+    document.getElementById('month1').innerHTML=mon1;
+    
+    var yr1="<option>Year</option>";
+    for (let i=1950;i<2025;i++){
+        yr1+="<option value="+i+">"+i+"</option>";
+
+    }
+    document.getElementById('year1').innerHTML=yr1;
+
+    
+    
+//While Loop
+
+    var d2="<option>Date</option>";
+    var j=1;
+    while(j<=31){ 
+        d2+="<option value="+j+">"+j+"</option>";
+        j+=1;
+
+    }
+    document.getElementById('date2').innerHTML=d2;
+ 
+    var mon2="<option>Month</option>";
+    var j=1;
+    while(j<=12){ 
+        mon2+="<option value="+j+">"+j+"</option>";
+        j+=1;
+
+    }
+    document.getElementById('month2').innerHTML=mon2;
+    
+    var yr2="<option>Year</option>";
+    var j=2000;
+    while(j<=2024){ 
+        yr2+="<option value="+j+">"+j+"</option>";
+        j+=1;
+
+    }
+    document.getElementById('year2').innerHTML=yr2;
+
+
+// do while loop
+
+    var d3="<option>Date</option>";
+    var k=1;
+    do{
+        d3+="<option value="+k+">"+k+"</option>";
+        k+=1;
+
+    }while(k<=31)
+    document.getElementById('date3').innerHTML=d3;
+
+    var mon3="<option>Month</option>";
+    var k=1;
+    
+    do{
+        mon3+="<option value="+k+">"+k+"</option>";
+        k+=1;
+
+    }while(k<=12)
+    document.getElementById('month3').innerHTML=mon3;
+
+    var yr3="<option>Year</option>";
+    let l=2000;
+    do{
+        yr3+="<option value="+l+">"+l+"</option>";
+        l+=1;
+
+    }while(l<=2024)
+    document.getElementById('year3').innerHTML=yr3;
+
+
+</script>
+</body>
+</html>

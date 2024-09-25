@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Functions in JS</title>
+</head>
+<body>
+    <!-- 
+    Functions are one of the fundamental building blocks in JavaScript. 
+    A function in JavaScript is similar to a procedure—a set of statements that performs a task or
+    calculates a value, but for a procedure to qualify as a function, it should take some input 
+    and return an output where there is some obvious relationship between the input and the output. 
+    To use a function, you must define it somewhere in the scope from which you wish to call it.
+    * Functions in JS are block of codes that can be defined and called at any point any of time in a program.
+    * To define a function we can use "function" keyword followed by function name and nessessary parameters when required
+
+    Syntax :
+      function_keyword function_name(parameter1,parameter2)
+      {
+      //logic of functions
+      }
+
+      function_name();
+
+      //type of functions
+       1.function without parameters
+       2.function with parameters
+       3.function with return statement
+       4.function with default parameters
+       5.Named function/function with name
+       6.Anonymous funcion/function without a name
+       7.Variable Function 
+       8.Callback Function
+       9.Nested Function
+       10.Recursive function
+       11.IIFE(Imediately Invoked Function Expression)
+       12.ES6+
+          -Arrow function
+     -->
+    <script>
+
+        // function with parameter
+        function mul(a,b,c){
+            let d=a*b*c;
+            console.log(d);
+        }
+        mul(4,6,8);
+        mul(2,2,3);
+        mul(2,4,1);
+
+
+
+      // function without parameter
+
+      function greetings(){
+console.log("Heloooooooooo")
+      }
+      greetings();
+      greetings();
+      greetings();
+
+
+        function gstCalc()
+        {
+            let price=500;
+            let gstPercentage=12;
+            let total=price+(price*gstPercentage/100);
+            console.log(total);
+            
+        }
+        gstCalc();
+
+        gstCalc();
+        gstCalc();
+
+
+        function gstCal(p,gp){
+            let totalPrice=p+(p*gp/100);
+            console.log(totalPrice);
+
+        }
+        gstCal(20000,12);
+        gstCal(500,12);
+        gstCal(99999,32);
+
+
+        function gstCalculation(p,gp){
+            let tP=p+(p*gp/100);
+            return tP;       //returns value 
+        }
+        let g=gstCalculation(10000,22);
+        console.log(g);
+
+        console.log(gstCalculation(10000,22));
+    </script>
+</body>
+</html>

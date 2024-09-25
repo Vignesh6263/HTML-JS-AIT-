@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Validation</title>
+    <style>
+        div{
+            border: 1px solid skyblue;
+            width: 300px;
+            padding: 30px;
+            margin: 30px 250px;
+          
+           
+        }
+        form input{
+            border-radius: 10px;            
+            padding: 7px;
+        }
+    </style>
+</head>
+<body>
+    <div>
+    <h2>Registeration Form</h2>
+    <form>
+		<label>Name :</label>
+        <input type="text" name="username" placeholder="Enter username" required />	<br />	<br />
+        <label>Password :</label>
+		<input type="password" name="pwd" placeholder="Enter Password" required />
+		<br />	<br />
+		<input type="hidden" name="userid" value="898989" />
+		<br />	<br />
+        <label>Resume</label>
+		<input type="file" name="resume" autofocus="1">
+		<br />	<br />
+		<label>Gender</label>
+		<input type="radio" name="gender" id="male" value="male" />
+		<label for="male">Male</label>
+		<input type="radio" name="gender" id="female" value="female" />
+        <label for="female">Female</label>
+		<input type="radio" name="gender" id="others" value="others" />
+        <label for="others">Others</label>
+        <br />	<br />
+		<label>Skills</label>
+		<input type="checkbox" name="skills" id="html">
+		<label for="html">HTML</label>
+		<input type="checkbox" name="skills" id="java" value="java">
+        <label for="java">Java</label>
+		<input type="checkbox" name="skills" id="css" value="css">
+        <label for="css">CSS</label>
+		<input type="checkbox" name="skills" value="js">
+        <label for="js">Java Script</label>
+		<br />	<br />
+		<select name="country" multiple>
+			<option value="">...Select...</option>
+			<option value="in">India</option>
+			<option value="usa">United States of America</option>
+			<option value="uk">United Kingdom</option>
+            <option value="china">China</option>
+            <option value="japan">Japan</option>
+            <option value="sa">South Africa</option>
+            <option value="pk">Pakistan</option>
+        
+
+
+		</select>
+        <br />	<br />
+		<textarea name="comment" ></textarea>
+        <br />	<br />
+		<input type="submit" name="submit" value="Register" />
+        <br />	<br />
+		<input type="reset" name="reset" value="Reset to Defaults" />
+
+	</form>
+    </div>
+</body>
+</html>

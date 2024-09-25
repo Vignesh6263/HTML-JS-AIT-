@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Events in JavaScript</title>
+</head>
+<body>
+    <!-- Events in JS (2 types)
+     1.Mouse Events
+       -click
+       -dblclick
+       -mousedown
+       -mouseup
+       -mousemove
+       -mouseleave
+       -mouseenter
+       -contextmenu ->right click of the mouse
+     2.Keyboard Events 
+       -keydown
+       -keyup
+       -keypress
+        -->
+
+        <!-- <form>
+            <input type="button" name="Button"  value=Button id="btn1"/>
+        </form> -->
+
+
+
+        <script>
+            //events works by using addEventListener
+
+        //click 
+            // const btn=document.querySelector('#btn1');
+            // btn.addEventListener('click',function(){
+            //     alert("Btn is Clicked")
+            // })
+
+        //dblclick(double click)
+            // document.querySelector('#btn1').addEventListener('dblclick',function(){
+            // alert("btn 2 is clicked")
+            // })
+        
+        //mouseenter
+            
+            // document.querySelector('#btn1').addEventListener('mouseenter',function(){
+            // alert("btn is entered")
+            // })
+            //.........
+
+            // document.addEventListener('keyup',(event)=>{
+            //     alert(`Key is  pressed:${event.key}`);
+            // })
+
+
+            document.addEventListener("keydown",(event)=>{
+                if(event.key==="Enter"){
+
+                    alert("enter key is pressed")
+                }
+                if(event.ctrlKey&&event.key==="b"){
+                    alert("ctrl+b is pressed")
+                }
+            })
+
+        </script>
+</body>
+</html>

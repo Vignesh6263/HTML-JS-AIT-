@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS Task</title>
+</head>
+<body>
+    <!-- 1.Write a function that returns the square of a number 
+         2.array of numbers and returns the sum of all numbers using function
+         3.larger from 2 numbers using function
+         4.
+         5. -->
+
+
+<div id="div1">div tag is here</div>
+<script>
+
+ //1.square
+function sqr(a){
+            let b=a*a;
+            console.log("Square of "+a+" is "+b);
+        }
+sqr(4);
+sqr(8);
+sqr(244);
+
+//2.array of num sum
+function sumArray(arr)
+{ let sum = 0;
+for (var i=0;i<arr.length;i++) {
+                sum += arr[i];}
+                console.log("Sum of "+arr+" is "+sum);}
+sumArray([34, 54, 66, 45, 3, 2]);
+sumArray([1,2,3,4, 3, 2]);
+sumArray([2,4,6,8]);
+
+
+
+//3.larger num
+function largernum(a, b) {
+            if (a > b) {
+                console.log("Larger number is "+a);
+            } else {
+                console.log("Larger number is "+b);
+            }
+        }
+largernum(10, 5);
+largernum(10, 25);
+largernum(100,55);
+
+
+//fun that returns another fun which multiplies a given number by fixed multiplier(closure) 
+
+function outerfun(n){
+                var multiply;
+                function innerfun(){
+                    
+                    multiply=n*n;
+                    console.log("Multiplay of "+n+" is "+multiply);
+                    return outerfun;
+
+                }
+                return innerfun;
+             }
+outerfun(5);
+
+      
+//hello world
+         (function() {console.log("Hello World");})();
+
+//key down 
+         document.addEventListener("keydown",(event)=>{
+                if(event.key==="Tab")
+                {alert("key is pressed")
+                }
+            });
+
+// 7. change font size of all li elements
+//  let elements = document.querySelectorAll('ul li');
+//  elements.forEach(li => li.style.fontSize = '20px');
+// 8. change background color of div by id
+// var element = document.getElementById('div1');
+// element.style.backgroundColor = 'blue';
+
+//reverse string
+function reverseString(str){
+let reversestr=str.split('').reverse().join('');
+console.log(reversestr);
+}
+reverseString("ABCDEFG");
+
+
+//3rd index of an array
+let arr1=[1,2,3,4,5];
+arr1.splice(3,0,100);
+console.log(arr1);
+
+//use splice to replace elements
+let arr2=[1,2,3,4,5];
+arr2.splice(1,2,'b','l',5);
+console.log(arr2);
+
+
+</script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

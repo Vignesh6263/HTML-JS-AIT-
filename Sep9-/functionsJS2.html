@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Types of Functions in JS</title>
+</head>
+<body>
+        <!-- 
+    * Functions in JS are block of codes that can be defined and called at any point any of time in a program.
+    * To define a function we can use "function" keyword followed by function name and nessessary parameters when required
+
+    Syntax :
+      function_keyword function_name(parameter1,parameter2)
+      {
+      //logic of functions
+      }
+
+      function_name();
+
+      //type of functions
+       1.function without parameters
+       2.function with parameters
+       3.function with return statement
+       4.function with default parameters
+       5.Named function/function with name
+       6.Anonymous funcion/function without a name
+       7.Variable Function 
+       8.Callback Function
+       9.Nested Function
+       10.Recursive function
+       11.IIFE(Imediately Invoked Function Expression)
+       12.ES6+
+          -Arrow function
+     -->
+          <script>
+        //8.Callback Function
+            function greet(a){
+                console.log("Hello ");
+                a();
+            }
+            function greetings(){
+                console.log("Good Afternoon");
+
+            }
+         greet(greetings); //function calling an another function
+          
+         //9.Nested Function
+
+         function parentFunction(){
+            let outerVariable="Parents Variable"
+            function childFunction(){
+                console.log(outerVariable); // in a nested function u can access the parents variables like this
+            }
+            childFunction();
+         }
+         parentFunction();
+
+
+         //10.Recursive function  : is a function it called itself multiple times to get to solve the problem
+    
+
+         function factorial(n){
+            if(n==0){
+                return 1;
+            }
+            else{
+                return n*factorial(n-1);
+            }
+         }
+         console.log(factorial(5));
+
+         //.IIFE imediately invoked function expression
+        //  Syntax :
+        //   (function(){
+        //     code
+        //   })
+        
+        //   ();
+
+
+        (function(){
+            var x=10;
+            console.log(x);
+        })
+        ();
+
+
+        //Arrow Function (ES6+ function)
+
+        //in normal function
+
+        function sub(a,b){
+            return a-b;
+        }
+        console.log(sub(10,4));
+
+
+        //in arrow function
+
+        let add=(x,y)=>{ return x+y; }
+        console.log(add(5,3));
+        
+
+        let g=()=>{console.log("Helooooooooo")}
+        g();
+
+
+
+        //normal function
+        function mul(a,b,c){
+         return a*b*c;
+        }
+       console.log(mul(1,2,3));
+
+       //in ES6
+        let multiple=(x,y,z)=>{return x*y*z;}
+        //let mult=(a,b,c)=>a*b*c;
+        //console.log(mult(2,2,2));
+        console.log(multiple(3,2,2));
+
+
+        //ES6
+        let gst=(p,gp)=>{ return p+(p*gp/100);}
+        console.log(gst(1000,12));
+        
+          </script>
+
+
+
+
+
+    
+</body>
+</html>

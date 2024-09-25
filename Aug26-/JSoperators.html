@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS Operators</title>
+</head>
+<body>
+    <!-- 
+    1.Arithmetic Operators: +,-,*,/,% 
+    2.Unary Operators:++,--
+     -Per Increment/Decrement (++a,--a)
+     -Post Increment/Decrement (a++,a--)
+    3.Assignment Opertors:=,+=,-=,*=,/=
+    4.Comparison Operator:==,===,!=,!==	,>,<,>=,<=,
+    5.Logical Operators : Logical AND (&&)
+                          Logical OR (||)
+                          Logical NOT(!)
+    6.Bitwise Operator: Bitwise AND(&)
+                        Bitwise OR(|)
+                        Bitwise NOR(^)
+                        Bitwise NOT(~)
+    7.Ternary Operator : ?
+                   Syntax: (conditon)?expression1:expression2;
+                   
+
+    -->
+    <script>
+        let a=5;
+        let b=10;
+        let sum=a+b
+        document.write(sum);
+        document.write(a+b);
+
+        c="2"
+        document.write("a+b+c");
+        document.write(a+b+c);
+        document.write(b+c+a);
+        document.write(c+a+b);
+        document.write("The sum of"+a+"and"+b+"is"+sum);
+        let x=4
+        x+=3 // x=x+3
+document.write(x);
+//Comparison Operator
+console.log(a==b); // checks only value
+console.log(a===b); //checks both value and data type
+console.log(a<b);
+console.log(a>b);
+console.log(a<=b);
+console.log(a>=b);
+console.log(a!=b);
+console.log(a!==b);
+
+//Logical Operators
+
+var d=2,e=4,f=8;
+
+//AND &&
+console.log((f>d)&&(f>e));
+//both contidition is true o/p is true otherwise its false
+console.log((d<e)&&(d>f));//one false op false
+
+
+//OR ||
+console.log((f>d)||(f>e));
+//one contidition is true o/p is true otherwise its false
+console.log((d<e)||(d>f));//one true op true
+console.log((e<d)||(d>f));//both false op false 
+        
+
+//NOT
+
+console.log(!(d<e));//oppsite of conditions true op is false
+
+console.log(!(d>e));//false op is true
+
+
+//Bitwise AND(&),OR(|),NOR(^),NOT(~)
+
+
+var g=5;//0101
+var h=3;//0011
+var q=17;
+var r=13;
+//0101  g
+//0011  h
+//0001-  g&h True & true op true(1) for (&)
+
+
+console.log(g&h);
+
+
+//0101  g
+//0011  h
+//0111-  g|h one True op true(1) for (|)
+
+console.log(g|h);
+console.log(q|r);
+
+
+
+//a=5,b=10
+(a>b)?console.log("a is grater"):console.log("b is greater");// if condition true first exp will be op else false  exp2 is op
+
+    </script>
+</body>
+</html>

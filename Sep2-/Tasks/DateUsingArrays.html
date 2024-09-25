@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Date Using Arrays and Loops</title>
+</head>
+<body>
+     <!-- 
+    1.for   
+    syntax : for(initialization;condition;increment/decrement)
+                 { statements/expressions}
+    2.while
+    syntax : while(condition)
+                 { statements/expressions
+                   increment/decrement
+                  }
+    3.do while 
+    syntax : do
+                 { statements/expressions
+                   increment/decrement
+                 }while(condition) 
+     -->
+<br>
+<h2>Date using Arrays</h2>
+<br>
+    <select name="date" id="date1"></select> 
+    <select name="month1" id="month1"></select>
+    <select name="year1" id="year1"></select> <br>
+<br>    
+  <script>
+
+
+//For Loop 
+    var d="<option>Date</option>";
+    for (let i=1;i<32;i++){
+        d+="<option value="+i+">"+i+"</option>";
+
+    }
+    document.getElementById('date1').innerHTML=d;
+
+   
+
+    
+
+    var mon="<option>Month</option>";
+    let m=["Jan","Feb","Mar","Apr","May","June","July","Aug","Sep","Oct","Nov","Dec"]
+    let j=0;
+    while(j<m.length){ 
+        mon+="<option value='"+(j+1)+"'>"+m[j]+"</option>";
+        j++;
+    }
+    document.getElementById('month1').innerHTML=mon;
+
+
+    var yr="<option>Year</option>";
+    let k=2000;
+    do{
+        yr+="<option value="+k+">"+k+"</option>";
+        k+=1;
+
+    }while(k<=2024)
+    document.getElementById('year1').innerHTML=yr;
+
+</script>
+</body>
+</html>

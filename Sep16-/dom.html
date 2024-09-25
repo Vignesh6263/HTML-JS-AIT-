@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document Object Model</title>
+    <style>
+        div{
+            border: 1px solid blue;
+            padding: 10px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <!-- DOM 
+     In JavaScript,the DOM to access the document and its elements. The DOM is not a programming language, but without it, the JavaScript
+     All of the properties, methods, and events available for manipulating and creating web pages are organized into objects.
+      For example, the document object that represents dom model-->
+
+
+      <!-- 1.Event Bubbling -->
+
+
+<div id="d1">1
+    <div id="d2">2
+        <div id="d3">3
+
+        </div>
+    </div>
+</div>
+
+<div id="d4">a
+    <div id="d5">b
+        <div id="d6">c
+
+        </div>
+    </div>
+</div>
+
+
+      <div id="name1"><p id="name">Helloooo </p><b id="name2" style="display: none;">People</b> WhatsUp</div>
+
+
+
+
+      <script>
+        //innerText
+        console.log(document.getElementById("name1").innerText);
+
+        //innerHTML
+        console.log(document.getElementById("name1").innerHTML);
+
+        //TextContent
+        console.log(document.getElementById("name1").textContent);
+
+//event bubbling 
+//to stop event bubbling use stopPropogation ex
+        document.getElementById('d1').addEventListener("click",function(e){
+            alert("1 is clicked")
+        });
+        document.getElementById('d2').addEventListener("click",function(e){
+            alert("2 is clicked")
+            //to stop 
+            e.stopPropagation();
+        });
+        document.getElementById('d3').addEventListener("click",function(e){
+            alert("3 is clicked")
+        });
+
+
+        //event capturing -capturing all by parent to child 
+document.getElementById('d4').addEventListener("click",function(e){
+            alert("1 is clicked")
+        },false);
+        document.getElementById('d5').addEventListener("click",function(e){
+            alert("2 is clicked")
+            //to stop 
+            // e.stopPropagation();
+        },false);
+        document.getElementById('d6').addEventListener("click",function(e){
+            alert("3 is clicked")
+        },false);
+
+
+
+
+
+
+
+      </script>
+</body>
+</html>

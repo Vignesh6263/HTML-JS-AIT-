@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scopes and closures in JS</title>
+</head>
+<body>
+    <!-- Scopes :
+              1.Gloabal Scope
+              Gloabal Scope Variable => var 
+              2.Local Scope / Block Scope
+              Local Scope Variable => let
+        
+        Closures : It is a feature in JS that allows inner function to access outer scope of a function
+        
+       -->
+
+
+       <!-- //Closures  -->
+       <h2> JS Closures</h2>
+       <button type="button" onclick="account()">-100</button>
+              <script>
+var bal=1000;
+function account(){
+
+function currentBal(){
+    bal=bal-100;
+    alert("Your current balance is "+bal);
+}
+currentBal()
+}
+
+{ 
+      var a=10;
+      let  b=10;
+      console.log(a);//global
+      console.log(b); //local 
+ }
+                console.log(a); //Global
+                //console.log(b); error because local  scope variable can't access the out side 
+
+             let x="Global var"; //its outside the scope so u can access it any where
+             function fun(){
+                let y="Local var"; //it's only access i inside scope only
+                console.log(x);
+                console.log(y);
+                
+                
+             }
+             fun();
+
+             //closures
+
+             function outer(){
+                var f=1;
+                function inner(){
+                    return f;
+
+                }
+                return inner;
+             }
+         //////
+            // console.log(d());
+
+
+
+
+
+
+              </script>
+    
+</body>
+</html>

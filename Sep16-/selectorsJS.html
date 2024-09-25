@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS Selectors</title>
+    <style>
+        .border{
+            border: 1px solid darkblue;
+            background-color: aqua;
+
+
+        }
+    </style>
+</head>
+<body>
+  <!-- 
+    JS  Selectors (5 types) 
+    1.getElementsByTagName():
+    2.getElementsByClassName():
+    3.getElementById():
+    4.queryselector():
+    5.queryselectorAll():
+    -->
+
+<div id="div1">HTML</div>
+<div class="boxes">CSS</div>
+<section>Python</section>
+<div class="div3">JS</div>
+<div>ReactJS</div>
+<script>
+// 1.getElementsByTagName(): it always returns a collection it  means it return an array
+
+
+console.log(document.getElementsByTagName("div"));
+console.log(document.getElementsByTagName('div')[1]);
+console.log(document.getElementsByTagName("div")[2].style.backgroundColor="skyblue");
+console.log(document.getElementsByTagName("div")[0].style.border="1px solid skyblue");
+
+
+//using classList
+document.getElementsByTagName("section")[0].classList="border";
+
+
+//using loops  1.getElementsByTagName():
+let seclist=document.getElementsByTagName('div');
+console.log(seclist);
+for (let i=0;i<seclist.length;i++){
+    seclist[i].classList="border"
+}
+
+//using loops  2.getElementsByClassName():
+let seclit=document.getElementsByClassName('div3');
+console.log(seclit);
+for (let i=0;i<seclit.length;i++){
+    seclit[i].style.border="2px solid black"
+}
+
+//  3.getElementById(): selects only single element by id name
+document.getElementById('div1').style.color="green";
+
+//  4.queryselector()
+console.log(document.querySelector('#div1')); //select using id
+//  5.queryselectorALL()
+console.log(document.querySelectorAll('.boxes')); //select using class name
+document.querySelectorAll('.boxes').style.backgroundColor="lightgray";
+
+</script>
+</body>
+</html>

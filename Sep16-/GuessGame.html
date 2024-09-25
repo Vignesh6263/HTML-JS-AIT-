@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guess the number</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+</head>
+<style>
+#main1,#againBtn,#checkBtn,#main2{
+        font-family: "Press Start 2P", system-ui;
+        font-weight: 400;
+        font-style: normal;
+    }
+#main2{
+margin-bottom:50%;
+display: grid;
+grid-template-columns: 1fr 0px 1fr;
+}
+.again{
+    color: black;
+    background-color: white;
+    padding: 5px;
+    margin: 4px;
+    font-size: 35px;
+}
+#label1{
+    color: white;
+    background:black;
+    float:right;
+    margin-top: 30px;
+    margin-right: 20px;
+    font-size:20px;
+    padding: 4px;
+    
+}
+.check{
+    color: black;
+    background-color: white;
+    padding: 4px;
+    margin: 4px;
+    font-size: 25px;
+
+}
+h1{
+    color: white;
+    background-color: black;
+    padding: 5px;
+    font-size: 40px;
+    align-content: center;
+    align-items: center;
+    text-align: center;
+}
+#label2{
+    position: absolute;
+    color:white;
+    background:red;
+    top: 50%;
+    left: 50%;
+    padding: 5px;
+    font-size: 80px;
+}
+.div2,.div3{
+    margin-top: 200px; 
+    width: 50;   
+    
+}
+#label3,#label4,#label5{
+    margin-bottom: 20px;
+    align-content: space-evenly;
+    padding: 2px;
+    display: block;
+    
+}
+.num{
+    margin: 10px;
+    color: white;
+    background: #000;
+    border:  solid 2px white;
+    font-size: 40px;
+    text-align: center;
+    margin-bottom: 20px;
+   
+}
+.num,.check{
+    display: block;
+    margin-left: 20px;
+}
+
+    
+
+
+
+   
+</style>
+<body>
+<div id="main1">
+    <div id="div1">
+        <input type="button" class="again" id="againBtn" value="Again!" />
+        <label id="label1">(Between 1 and 20)</label>
+        <h1>Guess My Number!</h1>
+        <label id="label2">?</label>
+    </div>
+</div>
+<div id="main2">
+    <div id="div2" class="div2">
+        <input type="number" id="inputNum" min=1 max=20 class="num" />
+        <input type="button" class="check"  id="checkBtn" value="check!" />
+    </div>
+    <div id="div3" class="div3">
+        <label id="label3">Start guessing...</label>
+
+        <label id="label4">Score :</label>
+
+        <label id="label5">Highscore :</label>   
+
+    </div>
+</div>
+    
+    <script>
+
+    </script>    
+</body>
+</html>

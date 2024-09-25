@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Data Types</title>
+</head>
+<body>
+    <!-- Data Types in JS
+    1.Primitive Data Types
+    -number
+    -string
+    -boolean
+    -undefined
+    -null
+    2.Non Primitive Data Types
+    -array [In a single variable we can  store multiple values of miultiple data types ]
+    -object[real world entites ,obj are always created in the term of keys and values]
+    -array of objects -->
+</body>
+<script>
+    var a=20.56;  //number data type
+    console.log(a);
+    console.log(typeof(a)); //checking the type of datatype
+
+    var b='vijay'; //string
+    console.log(b);
+    console.log(typeof(b));
+
+    const isLoggedIn=true; //boolean 
+    console.log(isLoggedIn);
+    console.log(typeof(isLoggedIn));
+
+    var c;   //undefined
+    console.log(c);
+    console.log(typeof(c));
+
+    let f=undefined; //undefined
+    console.log(f);
+    console.log(typeof(f));
+
+    let g=null; //null 
+    console.log(g);
+    console.log(typeof(g));
+
+
+    var ar=[1,'hdsf',67]; //array
+    //syntax : var_Keyword var_Name=[multilple values];
+    console.log(ar);
+    console.log(typeof(ar));
+
+
+    //object : real world entites and objects are always created in the term of key and values.
+    //key : values ;
+    let obj1={
+        name:'vijay',
+        amt:35000,
+        course:"MERN STACK",
+        Ratings : "4 *"
+    };
+    console.log(obj1);
+    console.log(typeof(obj1));
+
+
+//array of objects 
+
+    var x=[{id:1,name:"vj",course:'MERN Stack'},{id:5,name:"vj",course:'MERN Stack'},{id:2,name:"vj2",course:'MERN Stack'},{id:3,name:"vj3",course:'MERN Stack'},{id:4,name:"vijay",course:'MERN Stack'}]
+console.log(x);
+console.log(typeof(x));
+
+
+
+
+   
+    
+
+</script>
+</html>

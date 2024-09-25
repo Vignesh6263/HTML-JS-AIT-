@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <title>JS Loops</title>
+</head>
+<body>
+    <!-- 
+    1.for   
+    syntax : for(initialization;condition;increment/decrement)
+                 { statements/expressions}
+    2.while
+    syntax : while(condition)
+                 { statements/expressions
+                   increment/decrement
+                  }
+    3.do while 
+    syntax : do
+                 { statements/expressions
+                   increment/decrement
+                 }while(condition) 
+     -->
+
+<br>
+<h2>Using HTML option tag</h2>
+<br>
+<select name="year" id="year">
+    <option value="s">.......Select.......</option>
+    <option value="2000">2000</option>
+    <option value="2001">2001</option>
+    <option value="2002">2002</option>
+    <option value="2003">2003</option>
+    <option value="2004">2004</option>
+    <option value="2005">2005</option>
+    <option value="2006">2006</option>
+    <option value="2007">2007</option>
+    <option value="2008">2008</option>
+</select>
+<br>
+<h2>Using JavaScript Loops</h2>
+<br>
+<select name="years" id="for">
+    </select>
+    <select name="years" id="while">
+    </select>
+    <select name="years" id="dowhile">
+    </select>
+
+</select>
+<script>
+//for
+    var opt="<option>Year</option>";
+    for (let i=1900;i<2025;i++){
+        opt+="<option value="+i+">"+i+"</option>";
+
+    }
+    document.getElementById('for').innerHTML=opt;
+
+//while
+    var opt2="<option>Date</option>";
+    let j=1;
+    while(j<=31){
+        opt2+="<option value="+j+">"+j+"</option>";
+        j+=1;
+    }
+    document.getElementById('while').innerHTML=opt2;
+
+    //do while
+    var opt3="<option>Month</option>";
+    let k=1;
+    do{
+        opt3+="<option value="+k+">"+k+"</option>";
+        k+=1;
+
+    }while(k<=12)
+    document.getElementById('dowhile').innerHTML=opt3;
+
+
+// //for loop
+
+// var a;
+// for(a=2;a<=20;a+=2)
+// {
+//     document.write("<br>"+a+"  <br>");
+// }
+
+// //while
+// let n=5;
+// while(n<=120){
+//     document.write(n+"<br>");
+//     n+=12;
+// }
+    
+    
+// //do while 
+// var b=5;
+// do
+// {
+//     document.write(b+"<br>");
+//     b+=5;
+// }while(b<=55)    
+</script>
+    
+</body>
+</html>
